@@ -406,7 +406,9 @@ SESSION_START();
                                 <input class="form-control" type="date" id="checkout" name="checkout" required>
                             </div>
                         </div>
-                        <button class="btn btn-primary m-3" type="submit">Book without Payment</button>
+                        <input type="hidden" name="hotel_id" value="<?php echo $hotel_id; ?>">
+                        <button class="btn btn-primary m-3" name="Submit" type="submit">Book without
+                            Payment</button>
                     </div>
 
                     <!-- Step 2: Rooms -->
@@ -972,10 +974,11 @@ SESSION_START();
                             </div>
                         </div>
 
-                        <input type="hidden" name="hotel_id" value="<?php echo $hotel_id; ?>">
+
                         <button class="btn btn-primary text-white" name="Submit" type="submit"> <i
                                 class="fa fa-lock mx-3" aria-hidden="true"></i> <strong class=" h5"> Complete
-                                Booking</strong> </button>
+                                Booking</strong>
+                        </button>
                     </div>
 
 

@@ -1277,7 +1277,6 @@ require('db.php');
 
                                 <a href="#amenities_collapse" data-bs-toggle="collapse" class="text-primary">
                                     more...</a> <br>
-                                <?php echo $location; ?>
                                 <input type="hidden" name="location" value="<?php echo $location; ?>">
                                 <input class="btn btn-primary" type="submit" name="amenities" value="Check">
 
