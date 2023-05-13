@@ -46,18 +46,14 @@
                     $sql_reserve = "UPDATE room SET reserve_status = 'YES' WHERE room_id = '$room'";
                     if(mysqli_query($con, $sql_reserve)){
                         $msg = "You have Successfully Reserved a room";
-                        echo ' <div class="alert alert-success my-5" style="text-align: center"> <strong> '. $msg .'</strong></div> ';
+                        echo ' <div class="alert alert-success my-5" style="text-align: center"> <strong> '. $msg .'</strong> ';
+                        echo (" <br> <a class='btn btn-primary text-white w-25 mx-5' href='index.php'> Continue </a></div>");
                     }
-
-
-                    
                 } else {
                     $msg = "Error Reserving a room";
                     echo ' <div class="alert alert-danger" style="text-align: center"> '. $msg .'</div> ';
                 }
-
             }
-
     ?>
 
     </div>
