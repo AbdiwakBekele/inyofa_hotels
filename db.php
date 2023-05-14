@@ -10,6 +10,11 @@
     // $password = "inyofa@hotel";
     // $db_Name = "inyofaco_hotel";
 
+    // $serverName = "inyofa.com";
+    // $userName = "inyofaco_testUser";
+    // $password = "inyofa@hotel";
+    // $db_Name = "inyofaco_testHotels";
+
     $con = mysqli_connect($serverName, $userName, $password, $db_Name);
 
     if(!$con){

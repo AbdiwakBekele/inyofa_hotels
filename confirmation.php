@@ -47,7 +47,34 @@
                     if(mysqli_query($con, $sql_reserve)){
                         $msg = "You have Successfully Reserved a room";
                         echo ' <div class="alert alert-success my-5" style="text-align: center"> <strong> '. $msg .'</strong> ';
+
+                        // Email API
+                        $msg = "Welcome to Inyofa Hotels | You have successfully reserved a room no: ". $room ;
+                        // Set up the email recipient and subject
+                        $to = $email;
+                        $subject = "Room Reservation";
+
+                        // Set up the email message
+                        $message = $msg;
+
+                        // Set up the email headers
+                        $headers = "From: info@inyofa.com\r\n";
+                        $headers .= "Reply-To: info@inyofa.com\r\n";
+                        $headers .= "X-Mailer: PHP/" . phpversion();
+
+                        // Set up the sendmail path and options
+                        ini_set("sendmail_path", "/usr/sbin/sendmail -t -i -finfo@inyofa.com -rinfo@inyofa.com -S mail.inyofa.com");
+
+                        // Send the email
+                        if(mail($to, $subject, $message, $headers)) {
+                            //echo "Email sent successfully.";
+                        } else {
+                        echo "Email sending failed.";
+                        }
+
                         echo (" <br> <a class='btn btn-primary text-white w-25 mx-5' href='index.php'> Continue </a></div>");
+
+
                     }
                 } else {
                     $msg = "Error Reserving a room";

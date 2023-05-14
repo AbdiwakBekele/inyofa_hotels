@@ -407,8 +407,7 @@ SESSION_START();
                             </div>
                         </div>
                         <input type="hidden" name="hotel_id" value="<?php echo $hotel_id; ?>">
-                        <button class="btn btn-primary m-3" name="Submit" type="submit">Book without
-                            Payment</button>
+                        <button class="btn btn-primary m-3" name="Submit" type="submit">Pay at the property</button>
                     </div>
 
                     <!-- Step 2: Rooms -->
